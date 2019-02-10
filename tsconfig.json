@@ -1,27 +1,17 @@
 {
   "compilerOptions": {
-    "target": "esnext",
     "module": "commonjs",
-    "moduleResolution": "node",
-    "noEmitOnError": true,
-    "noImplicitAny": true,
-    "experimentalDecorators": true,
+    "target": "es5",
+    "noImplicitAny": false,
     "sourceMap": true,
-    "baseUrl": ".",
-    "paths": {
-      "*": [
-        "src/types/*"
-      ]
-    },
-    "allowSyntheticDefaultImports": true,
-    "sourceRoot": "src",
-    "outDir": "dist"
+    "outDir": "build"
   },
-  "include": [
-    "src/**/*"
-  ],
   "exclude": [
-    "dist",
-    "node_modules"
+    "node_modules",
+    "**/*.spec.ts",
+    "**/*.test.ts"
+  ],
+  "include": [
+    "src/**/*.ts"
   ]
 }
