@@ -1,35 +1,32 @@
 {
-  "name": "temp",
+  "name": "ts-quick-start",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "A typescript quickstarter project",
+  "main": "dist/index.js",
   "scripts": {
-    "start": "node --inspect-brk=7000 -r ts-node/register src/index.ts",
-    "dev": "nodemon",
-    "build": "tsc",
-    "test": "jest",
-    "test:watch": "jest --watch"
+    "start": "cross-env NODE_ENV=development nodemon",
+    "build": "cross-env NODE_ENV=production webpack --config webpack.config.js"
   },
-  "author": "",
-  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gugamm/ts-quick-start.git"
+  },
+  "author": "gugamm",
+  "license": "MIT",
   "devDependencies": {
-    "@types/jest": "^24.0.0",
-    "jest": "^24.1.0",
-    "nodemon": "^1.18.10",
-    "ts-jest": "^23.10.5",
-    "ts-node": "^8.0.2",
-    "typescript": "^3.3.3"
-  },
-  "jest": {
-    "transform": {
-      ".(ts|tsx)": "ts-jest"
-    },
-    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
-    "moduleFileExtensions": [
-      "ts",
-      "tsx",
-      "js",
-      "json"
-    ]
+    "@babel/core": "^7.11.1",
+    "@babel/plugin-proposal-class-properties": "^7.10.4",
+    "@babel/preset-env": "^7.11.0",
+    "@babel/preset-typescript": "^7.10.4",
+    "@types/node": "^14.0.27",
+    "babel-loader": "^8.1.0",
+    "cross-env": "^7.0.2",
+    "fork-ts-checker-webpack-plugin": "^5.0.14",
+    "nodemon": "^2.0.4",
+    "source-map-loader": "^1.0.1",
+    "ts-node": "^8.10.2",
+    "typescript": "^3.9.7",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12"
   }
 }
